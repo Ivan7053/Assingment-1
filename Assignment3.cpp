@@ -42,7 +42,7 @@ void pushTail(int angka){
 // Print
 int count=0 , cek=0;
 int condition = 0;
-float total = 0;
+int total = 0;
 void printLinkedList(){
   Node *curr = head;
   while(curr !=NULL){
@@ -66,13 +66,13 @@ void printLinkedList(){
       if(count/2 == cek){
           condition++;
           total = total + ptr->angka;
-      }
-      if(count/2+1 == cek){
-          condition++;
-          total = total + ptr->angka;
-      }
-      if(condition ==2){
-          printf("Middle : %.2f" , total/2);
+      // }
+      // if(count/2+1 == cek){
+      //     condition++;
+      //     total = total + ptr->angka;
+      // }
+      // if(condition ==2){
+          printf("Middle : %d" , total);
           break;
       }
     }
@@ -110,7 +110,7 @@ int main(){
     pushTail(a);
   }
 
-  sortLinkedList();
+  // sortLinkedList();
   printLinkedList();
 printf("\n");
 return 0;
